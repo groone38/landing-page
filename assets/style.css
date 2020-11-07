@@ -1,0 +1,146 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.content-box {
+  margin: 0 auto;
+  width: 1110px;
+}
+
+.button {
+  border-radius: 2px;
+  font-weight: 500;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+
+.button_small {
+  font-size: 12px;
+  line-height: 18px;
+  min-width: 160px;
+  padding: 4px 0;
+}
+
+.button_medium {
+  font-size: 16px;
+  line-height: 26px;
+  min-width: 189px;
+  padding: 5px 0;
+}
+
+.button_normal {
+  background-color: #111B47;
+  color: white;
+}
+
+.button_outline {
+  background-color: transparent;
+  color: #091133;
+  border: 2px solid #091133;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+}
+
+.header__content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu__link {
+    color: #505F98;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.main-menu__link + .main-menu__link {
+  margin-left: 60px;
+}
+
